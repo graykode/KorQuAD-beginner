@@ -76,7 +76,7 @@ Click the `New Worksheet` button in the upper right corner and name the workshee
 
 2. In the web interface terminal at the top of the page, type the following command:
 
-   `<name-of-your-uploaded-prediction-bundle>` is uuid[0:8] about `output/predictions.json`.
+   `<name-of-your-uploaded-prediction-bundle>` is uuid[0:8] of `output/predictions.json`.
 
    ```shell
    # web interface terminal
