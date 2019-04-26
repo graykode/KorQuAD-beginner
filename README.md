@@ -76,7 +76,7 @@ Click the `New Worksheet` button in the upper right corner and name the workshee
 
 2. In the web interface terminal at the top of the page, type the following command:
 
-   <name-of-your-uploaded-prediction-bundle> is uuid[0:8] about `output/predictions.json`.
+   `<name-of-your-uploaded-prediction-bundle>` is uuid[0:8] about `output/predictions.json`.
 
    ```shell
    # web interface terminal
@@ -114,7 +114,7 @@ You can see `bundle spec . doesn't match any bundles`, but It's not a problem to
 
 Then, Run learning model for dev set!
 
-:src, :config meaning of :<bundle-name>
+:src, :config meaning of : `<bundle-name>`
 
 ```shell
 # command on Anaconda-Python2.7
@@ -129,7 +129,7 @@ $ cl run :KorQuAD_v1.0_dev.json :src :config "python src/run_KorQuAD.py --bert_c
    python src/<path-to-prediction-program> <input-data-json-file> <output-prediction-json-path>
    ```
 
-   above command match below: <bundle-name>/file-name
+   above command match below: `<bundle-name>`/file-name
 
    ```
    python src/run_KorQuAD.py --bert_config_file=config/bert_config.json --vocab_file=config/vocab.txt --init_checkpoint=config/model.ckpt-45000 --do_predict=True --output_dir=output config/KorQuAD_v1.0_dev.json predictions.json
@@ -177,4 +177,4 @@ These Repository are all released under the same license as the source code (Apa
 
 - Tae Hwan Jung(Jeff Jung) @graykode, Kyung Hee Univ CE(Undergraduate).
 - Author Email : [nlkey2022@gmail.com](mailto:nlkey2022@gmail.com)
-- Reference : [Original KorQuAD tutorial](https://worksheets.codalab.org/worksheets/0x7b06f2ebd0584748a3a281018e7d19b0/), [The Land Of Galaxy Blog](<http://mlgalaxy.blogspot.com/2019/02/bert-multilingual-model-korquad-part-2.html#comment-form>)
+- Reference : [Original KorQuAD tutorial](https://worksheets.codalab.org/worksheets/0x7b06f2ebd0584748a3a281018e7d19b0/), [The Land Of Galaxy Blog](http://mlgalaxy.blogspot.com/2019/02/bert-multilingual-model-korquad-part-2.html#comment-form)
