@@ -28,7 +28,7 @@ $ python run_squad.py \
   --do_lower_case=False
 ```
 
-I tried training the GeForce RTX 2080 and 11GB in memory, and it took about three to four hours.
+I trained in GeForce RTX 2080 and 11GB in memory, and it took about three to four hours.
 
 Then you can evaluate F1 and EM score.
 
