@@ -1,0 +1,13 @@
+python run_squad.py \
+  --vocab_file=multi_cased_L-12_H-768_A-12/vocab.txt \
+  --bert_config_file=multi_cased_L-12_H-768_A-12/bert_config.json \
+  --init_checkpoint=multi_cased_L-12_H-768_A-12/bert_model.ckpt \
+  --do_train=True \
+  --train_file=config/KorQuAD_v1.0_train.json \
+  --do_predict=True \
+  --predict_file=config/KorQuAD_v1.0_dev.json \
+  --train_batch_size=4 \
+  --num_train_epochs=3.0 \
+  --max_seq_length=384 \
+  --output_dir=./output \
+  --do_lower_case=False
