@@ -12,7 +12,7 @@ KorQuAD데이터를 fine-tuning하는 거는 쉬웠으나, `codalab`을 사용�
 
 ### 1. fine-tuning KorQuAD
 
- [google-research's BERT github](https://github.com/google-research/bert)를 사용하시면 쉽게 fine-tuning할 수 있습니다. 아래 한 줄로 KorQuAD에 대한 학습이 완료됩니다. Google-research's BERT를 그대로 사용하신다면, `unicodedata.normalize("NFD", text)`가 `UNK`으로 subtoken이 됩니다. [여기](https://github.com/google-research/bert/pull/228)와  pull request [code](https://github.com/google-research/bert/pull/228/commits/c26341272de7c0d22cd65ea58d884323f64b7a92)를 보신다면 해결 방안에 대해 더 자세히 볼 수 있습니다! 더불어 여기 repository에 그 부분 코드를 추가했습니다. config 파일에 대해서는 [**BERT-Base, Multilingual Cased (New, recommended)**](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) 를 사용하세요.
+ [google-research's BERT github](https://github.com/google-research/bert)를 사용하시면 쉽게 fine-tuning할 수 있습니다. 아래 한 줄로 KorQuAD에 대한 학습이 완료됩니다. Google-research's BERT를 그대로 사용하신다면, `unicodedata.normalize("NFD", text)`로 인해 `UNK`으로 subtoken화 됩니다. [여기](https://github.com/google-research/bert/pull/228)와  pull request [code](https://github.com/google-research/bert/pull/228/commits/c26341272de7c0d22cd65ea58d884323f64b7a92)를 보신다면 해결 방안에 대해 더 자세히 볼 수 있습니다! 더불어 여기 repository에 그 부분 코드를 추가했습니다. `multi_cased_L-12_H-768_A-12 ` 폴더에 대해서는 [**BERT-Base, Multilingual Cased (New, recommended)**](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip) 를 사용하시면 됩니다.
 
 ```shell
 $ python run_squad.py \
@@ -44,7 +44,7 @@ $ python evaluate-v1.0.py config/KorQuAD_v1.0_dev.json output/predictions.json
 
 
 
-### 2. KorQuAD를 제출하는 Codalab 가이드라인
+### 2. KorQuAD Submit Codalab Guide
 
 ##### 0. Codalab 회원가입
 
